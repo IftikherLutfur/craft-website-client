@@ -7,7 +7,7 @@ const CraftList = () => {
     return (
         <div>
             My Craft List:
-            <div className="grid grid-cols-2 gap-5">
+            <div className="grid mx-6 my-8 grid-cols-2 gap-5">
                 {
                     lists.map(cr => <ViewCraftListData key={cr.
                         _id} cr={cr} lists={lists}></ViewCraftListData>)

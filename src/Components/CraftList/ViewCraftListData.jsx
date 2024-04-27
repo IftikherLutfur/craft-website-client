@@ -34,7 +34,7 @@ const ViewCraftListData = ({ cr, lists }) => {
                             if (data.deletedCount > 0) {
                                 Swal.fire({
                                     title: "Deleted!",
-                                    text: "Coffee has been deleted.",
+                                    text: "Card has been deleted.",
                                     icon: "success"
                                 });
                             }
@@ -48,7 +48,7 @@ const ViewCraftListData = ({ cr, lists }) => {
 
     return (
         <div>
-            <div className=" flex gap-48 border-2 px-4 py-2">
+            <div className=" gap-48 border-2 bg-slate-100 rounded-xl hover:border-sky-400 px-4 py-2">
                 <div className="flex gap-5">
                     <div>
                         <img src={image} className="w-[250px] h-[200px]" alt="" />
@@ -64,10 +64,10 @@ const ViewCraftListData = ({ cr, lists }) => {
                     </div>
                 </div>
 
-                <div className="join join-vertical space-y-3 py-10">
+                <div className="flex ml-12 my-2 gap-5 mr-5">
                     <NavLink to={`/update/${_id}`}>
-                        <button className="btn join-item bg-sky-400">Update</button>
-                    </NavLink>                                <button onClick={() => handleDelete(_id)} className="btn join-item bg-orange-500">Delete</button>
+                        <button className="btn w-full join-item bg-sky-400">Update</button>
+                    </NavLink><button onClick={() => handleDelete(_id)} className="btn join-item bg-orange-500">Delete</button>
                 </div>
             </div>
         </div>
