@@ -1,10 +1,10 @@
-import { useContext } from "react";
-import { AuthContext } from "../AuthProvider/AuthProvider";
+import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const AddCraft = () => {
+const UpdateData = () => {
 
-    const { user } = useContext(AuthContext);
+    const dataUpdate = useLoaderData();
+    const { _id, image, item, category, price, rating, custom, process, stock, description } =dataUpdate;
 
     const handleSignIn = e => {
         e.preventDefault()
@@ -20,8 +20,8 @@ const AddCraft = () => {
         const description = form.get('description')
         const craftInfo = { image, item, category, price, rating, custom, process, stock, description }
         console.log(craftInfo);
-        fetch('http://localhost:5000/craft', {
-            method: "POST",
+        fetch(`http://localhost:5000/craft/${_id}`, {
+            method: "PUT",
             headers: {
                 "content-type": "application/json"
             },
@@ -30,24 +30,31 @@ const AddCraft = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                if(data.insertedId){
+                if (data.modifiedCount>0) {
                     Swal.fire({
                         position: "top-end",
                         icon: "success",
                         title: "Card has been added",
                         showConfirmButton: false,
                         timer: 1500
-                      });
+                    });
+                }
+                if (data.modifiedCount===0) {
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "error",
+                        title: "Already updated",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
                 }
             })
 
     }
+
     return (
         <div>
-
-            <h1 className="text-2xl font-bold my-4 text-center">Add Craft Item</h1>
-            <h2 className="font-bold text-center">Name: {user.displayName}</h2>
-            <h2 className="font-bold text-center">Email: {user.email}</h2>
+            This is the update page
 
             <form onSubmit={handleSignIn} className="space-y-6">
 
@@ -69,6 +76,7 @@ const AddCraft = () => {
                             type="text"
                             name="item"
                             placeholder="name"
+                            defaultValue={item}
                             className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                     </div>
 
@@ -79,6 +87,7 @@ const AddCraft = () => {
                             type="text"
                             name="category"
                             placeholder="name"
+                            defaultValue={category}
                             className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                     </div>
 
@@ -91,6 +100,7 @@ const AddCraft = () => {
                             type="text"
                             name="price"
                             placeholder="Price"
+                            defaultValue={price}
                             className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 
                     </div>
@@ -104,6 +114,7 @@ const AddCraft = () => {
                             type="text"
                             name="rating"
                             placeholder="rating"
+                            defaultValue={rating}
                             className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 
                     </div>
@@ -116,6 +127,7 @@ const AddCraft = () => {
                             type="text"
                             name="custom"
                             placeholder="yes/no"
+                            defaultValue={custom}
                             className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 
                     </div>
@@ -127,6 +139,7 @@ const AddCraft = () => {
                             type="text"
                             name="process"
                             placeholder="time"
+                            defaultValue={process}
                             className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 
                     </div>
@@ -139,6 +152,7 @@ const AddCraft = () => {
                             type="text"
                             name="stock"
                             placeholder=" In stock/Made to Order"
+                            defaultValue={stock}
                             className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 
                     </div>
@@ -150,7 +164,9 @@ const AddCraft = () => {
                             type="text"
                             name="description"
                             placeholder="Description"
-                            className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            defaultValue={description}
+                            className="w-full px-4 py-3 rounded-md 
+                            dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 
                     </div>
 
@@ -158,8 +174,9 @@ const AddCraft = () => {
 
                 <button className="block w-full p-3 text-center rounded-sm dark:text-gray-50 dark:bg-violet-600">Add</button>
             </form>
+
         </div>
     );
 };
 
-export default AddCraft;
+export default UpdateData;

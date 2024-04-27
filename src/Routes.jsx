@@ -9,6 +9,7 @@ import SignIn from "./Components/SignUpIn/SignIn";
 import AddCraft from "./Components/AddCraft/AddCraft";
 import CraftList from "./Components/CraftList/CraftList";
 import PrivateRoutes from "./Components/PrivateRoutes/PrivateRoutes";
+import UpdateData from "./Components/Update/UpdateData";
 
   const router = createBrowserRouter([
     {
@@ -36,6 +37,11 @@ import PrivateRoutes from "./Components/PrivateRoutes/PrivateRoutes";
           path:'/list',
           element:<PrivateRoutes><CraftList></CraftList></PrivateRoutes>,
           loader:() => fetch('http://localhost:5000/craft')
+        },
+        {
+          path:'/update/:id',
+          element:<PrivateRoutes><UpdateData></UpdateData></PrivateRoutes>,
+      loader: ({params}) => fetch(`http://localhost:5000/craft/${params.id}`)
         }
 
       ]
