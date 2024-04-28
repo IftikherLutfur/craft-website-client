@@ -48,7 +48,7 @@ import ViewDEtails from "./Components/ViewDetails/ViewDEtails";
         },
         {
           path:'/all',
-          element:<PrivateRoutes><AllArtAndCraft></AllArtAndCraft></PrivateRoutes>
+          element:<AllArtAndCraft></AllArtAndCraft>
         },
         {
           path:'/details/:id',

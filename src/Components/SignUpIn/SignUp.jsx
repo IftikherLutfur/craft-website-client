@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 
 const SignUp = () => {
@@ -116,7 +117,7 @@ const SignUp = () => {
                 </div>
                 
                 <p className="text-xs text-center sm:px-6 dark:text-gray-600">Have an account?
-                    <a rel="noopener noreferrer" href="#" className="underline dark:text-gray-800">Sign in</a>
+                   <Link to='/in'> <a rel="noopener noreferrer" href="#" className="underline dark:text-gray-800">Sign in</a></Link>
                 </p>
             </div>
         </div>

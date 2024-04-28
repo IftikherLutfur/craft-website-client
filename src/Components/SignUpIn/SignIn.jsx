@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { Link } from "react-router-dom";
 
 const SignIn = () => {
 
@@ -82,7 +83,8 @@ const SignIn = () => {
 		</button>
 	</div>
 	<p className="text-xs text-center sm:px-6 dark:text-gray-600">Don not have an account?
-		<a rel="noopener noreferrer" href="#" className="underline dark:text-gray-800">Sign up</a>
+		<Link to='/up'><a rel="noopener noreferrer" href="#" 
+        className="underline dark:text-gray-800">Sign up</a></Link>
 	</p>
 </div>
 

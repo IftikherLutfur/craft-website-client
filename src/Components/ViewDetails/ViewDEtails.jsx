@@ -21,7 +21,8 @@ const ViewDEtails = () => {
            <p className="text-xl font-semibold"><em className="opacity-85">Description:</em>{loader.description}</p>
         </div>
           <div className="">
-          <NavLink to='/all'><button className=" btn bg-orange-300 flex"><FaArrowAltCircleLeft> </FaArrowAltCircleLeft>Back</button></NavLink>
+          <NavLink to='/all'>
+            <button className=" btn bg-orange-300 flex"><FaArrowAltCircleLeft> </FaArrowAltCircleLeft>Back</button></NavLink>
           </div>
     </div>
         </div>
