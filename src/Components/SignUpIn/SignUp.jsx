@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const SignUp = () => {
@@ -15,6 +16,31 @@ const SignUp = () => {
         const password = form.get('password')
         const userInformation = { name, email, image, password, }
         console.log(userInformation);
+        if(!/[A-Z]/.test(password)){
+           return Swal.fire({
+                icon: "error",
+                text: "Must have an Uppercase letter in the password",
+              });
+        }
+        else if(password.length < 6){
+            return Swal.fire({
+                icon: "error",
+                text: "Password should be minimum 6 character ",
+              });
+        }
+        else if(!/[a-z]/.test(password)){
+            return Swal.fire({
+                icon: "error",
+                text: "Must have a Lowercase letter in the password",
+              });
+        }
+        else Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Registered Successfully",
+            showConfirmButton: false,
+            timer: 1500
+          });
       createUser(email,password)
       .then(res => {
         updateUserProfile(name,image)
@@ -26,6 +52,7 @@ const SignUp = () => {
       })
 
     }
+
 
     return (
         <div>

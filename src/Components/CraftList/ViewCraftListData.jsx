@@ -3,7 +3,7 @@ import { NavLink, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const ViewCraftListData = ({ cr, lists }) => {
-    const { _id, item, image, category, price, rating, custom, stock } = cr;
+    const { _id, item, image, category, price, rating, custom, stock,process } = cr;
 
 
     const [remove, setRemove] = useState(lists)
@@ -23,7 +23,7 @@ const ViewCraftListData = ({ cr, lists }) => {
             .then((result) => {
                 if (result.isConfirmed) {
 
-                    fetch(`http://localhost:5000/craft/${_id}`,
+                    fetch(`https://craft-server-site.vercel.app/craft/${_id}`,
                         {
                             method: "DELETE"
                         })
@@ -61,6 +61,8 @@ const ViewCraftListData = ({ cr, lists }) => {
                         <p className="font-bold">Rating: {rating}</p>
                         <p className="font-bold">Custom: {custom}</p>
                         <p className="font-bold">Stock: {stock}</p>
+                        <p className="font-bold">Process Time: {process}</p>
+
                     </div>
                 </div>
 

@@ -10,6 +10,9 @@ import AddCraft from "./Components/AddCraft/AddCraft";
 import CraftList from "./Components/CraftList/CraftList";
 import PrivateRoutes from "./Components/PrivateRoutes/PrivateRoutes";
 import UpdateData from "./Components/Update/UpdateData";
+import AllArtAndCraft from "./Components/AllArtAndCraft/AllArtAndCraft";
+import { GiPrivateFirstClass } from "react-icons/gi";
+import ViewDEtails from "./Components/ViewDetails/ViewDEtails";
 
   const router = createBrowserRouter([
     {
@@ -36,12 +39,21 @@ import UpdateData from "./Components/Update/UpdateData";
         {
           path:'/list',
           element:<PrivateRoutes><CraftList></CraftList></PrivateRoutes>,
-          loader:() => fetch('http://localhost:5000/craft')
+          loader:() => fetch('https://craft-server-site.vercel.app/craft')
         },
         {
           path:'/update/:id',
           element:<PrivateRoutes><UpdateData></UpdateData></PrivateRoutes>,
-      loader: ({params}) => fetch(`http://localhost:5000/craft/${params.id}`)
+      loader: ({params}) => fetch(`https://craft-server-site.vercel.app/craft/${params.id}`)
+        },
+        {
+          path:'/all',
+          element:<PrivateRoutes><AllArtAndCraft></AllArtAndCraft></PrivateRoutes>
+        },
+        {
+          path:'/details/:id',
+          element:<PrivateRoutes><ViewDEtails></ViewDEtails></PrivateRoutes>,
+          loader: ({params}) => fetch(`https://craft-server-site.vercel.app/craft/${params.id}`)
         }
 
       ]

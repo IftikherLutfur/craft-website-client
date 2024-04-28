@@ -29,15 +29,19 @@ const Navbar = () => {
 							<NavLink to='/'><a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border- dark:text-violet-600 dark:border-violet-600">Home</a></NavLink>
 						</li>
 						<li className="flex">
-							<NavLink to='/list'><a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">My Art&Craft List</a></NavLink>
-						</li>
-						<li className="flex">
 							<NavLink to='/addCraft'>
-								<a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">Add Craft</a>
+								<a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">Add Product</a>
 							</NavLink>
 						</li>
+
 						<li className="flex">
-							<a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">Link</a>
+							<NavLink to='/list'><a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">My Art&Craft List</a></NavLink>
+						</li>
+
+						<li className="flex">
+			<NavLink to='/all'>
+			<a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">All Art & Craft</a>
+							</NavLink>
 						</li>
 					</ul>
 					<div className="items-center flex-shrink-0 hidden lg:flex">

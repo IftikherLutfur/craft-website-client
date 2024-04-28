@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 const UpdateData = () => {
 
     const dataUpdate = useLoaderData();
-    const { _id, image, item, category, price, rating, custom, process, stock, description } =dataUpdate;
+    const {image, _id, item, category, price, rating, custom, process, stock, description } =dataUpdate;
 
     const handleSignIn = e => {
         e.preventDefault()
@@ -20,7 +20,7 @@ const UpdateData = () => {
         const description = form.get('description')
         const craftInfo = { image, item, category, price, rating, custom, process, stock, description }
         console.log(craftInfo);
-        fetch(`http://localhost:5000/craft/${_id}`, {
+        fetch(`https://craft-server-site.vercel.app/craft/${_id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
@@ -65,7 +65,8 @@ const UpdateData = () => {
                         <input
                             type="url"
                             name="image"
-                            placeholder="name"
+                            placeholder="PHoto URL"
+                            defaultValue={image}
                             className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                     </div>
 
