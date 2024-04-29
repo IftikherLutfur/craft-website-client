@@ -18,7 +18,9 @@ const AddCraft = () => {
         const process = form.get('process')
         const stock = form.get('stock')
         const description = form.get('description')
-        const craftInfo = { image, item, category, price, rating, custom, process, stock, description }
+        const userEmail = form.get('userEmail')
+        const name = form.get('name')
+        const craftInfo = { image, item, category, price, rating, custom, process, stock, description, userEmail, name }
         console.log(craftInfo);
         fetch('https://craft-server-site.vercel.app/craft', {
             method: "POST",
@@ -40,7 +42,6 @@ const AddCraft = () => {
                       });
                 }
             })
-
     }
     return (
         <div className="mx-10 border-2 my-5 p-4 rounded-xl border-purple-300">
@@ -157,6 +158,34 @@ const AddCraft = () => {
                             className=" border-2 border-orange-300 w-full px-4 py-3 rounded-md dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 
                     </div>
+
+
+
+                    <div className=" space-y-1 text-sm">
+
+                        <label htmlFor="password" className="block dark:text-gray-600"></label>
+
+                        <input
+                            type="text"
+                            name="userEmail"
+                            placeholder="Description"
+                            defaultValue={user?.email}
+                            className=" border-2 border-orange-300 w-full px-4 py-3 rounded-md dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+
+                    </div>
+                    <div className=" space-y-1 text-sm ">
+
+                        <label htmlFor="password" className="block dark:text-gray-600"></label>
+
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Description"
+                            defaultValue={user?.displayName}
+                            className=" border-2 border-orange-300 w-full px-4 py-3 rounded-md dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+
+                    </div>
+
 
                 </div>
 

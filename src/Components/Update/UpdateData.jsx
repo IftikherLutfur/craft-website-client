@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateData = () => {
+
+    
 
     const dataUpdate = useLoaderData();
     const {image, _id, item, category, price, rating, custom, process, stock, description } =dataUpdate;
@@ -50,6 +53,7 @@ const UpdateData = () => {
                 }
             })
 
+       
     }
 
     return (
