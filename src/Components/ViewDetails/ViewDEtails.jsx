@@ -1,37 +1,11 @@
 import { NavLink, useLoaderData, useParams } from "react-router-dom";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
-import { useEffect, useState } from "react";
-
 
 const ViewDEtails = () => {
-    // const loaders = useLoaderData();
-
-    // const {id} =useParams()
-    // console.log(id);
-
-    // const [product, setProduct] = useState({})
-
-    // useEffect(()=>{
-    //     fetch(`https://craft-server-site.vercel.app/craft/${id}`)
-    //     .then(res=>res.json())
-    //     .then(data => {
-    //         setProduct(data)
-    //         console.log(data);
-    //     })
-    // },[id])
-
+    
     const cards = useLoaderData()
     const { id } = useParams()
-    // const idInt  = parseInt(id)
     const card = cards.find(bk => bk._id === id)
-    
-    // const {id} = useParams();
-    // const loader = loaders.find(ld => ld._id === id)
-    // console.log(loader);
-
-    // const loader = loader.find(loader=> loader._id === _id)
-    // console.log(loader)
-
 
     return (
         <div>

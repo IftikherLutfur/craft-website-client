@@ -15,11 +15,9 @@ const CraftList = () => {
 
     return (
         <div>
-            My Craft List:
+           <h1 className=" mt-5 text-center text-3xl font bold font-semibold"> My List</h1>
+           <p className="text-center font-semibold opacity-70">Here is all the data you added now you can update & delete</p>
             <div className="grid mx-6 my-8 grid-cols-2 gap-5">
-                
-                {list.length}
-    
                 {
                     list.map(cr => <ViewCraftListData key={cr.
                         _id} cr={cr} lists={list}></ViewCraftListData>)

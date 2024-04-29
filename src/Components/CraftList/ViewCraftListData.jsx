@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink, useLoaderData } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import Swal from "sweetalert2";
 
 const ViewCraftListData = ({ cr, list }) => {

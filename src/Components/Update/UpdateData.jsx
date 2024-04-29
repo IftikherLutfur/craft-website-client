@@ -1,15 +1,17 @@
 import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
-import { AuthContext } from "../AuthProvider/AuthProvider";
+
 
 const UpdateData = () => {
 
-const {user} = useContext(AuthContext);    
+    // const { user } = useContext(AuthContext);
 
     const dataUpdate = useLoaderData();
+    const { id } = useParams()
+    const updateData = dataUpdate.find(ud => ud._id === id)
     console.log(dataUpdate);
-    const {image, _id, item, category, price, rating, custom, process, stock, description } =dataUpdate;
+    const { image, item, category, price, rating, custom, process, stock, description } = updateData;
 
 
 
@@ -23,11 +25,11 @@ const {user} = useContext(AuthContext);
         const rating = form.get('rating')
         const custom = form.get('custom')
         const process = form.get('process')
-        const stock = form.get('process')
+        const stock = form.get('stock')
         const description = form.get('description')
         const craftInfo = { image, item, category, price, rating, custom, process, stock, description }
         console.log(craftInfo);
-        fetch(`https://craft-server-site.vercel.app/craft/${user.userEmail}`, {
+        fetch(`https://craft-server-site.vercel.app/craft/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
@@ -37,16 +39,16 @@ const {user} = useContext(AuthContext);
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                if (data.modifiedCount>0) {
+                if (data.modifiedCount > 0) {
                     Swal.fire({
                         position: "top-end",
                         icon: "success",
-                        title: "Card has been added",
+                        title: "Data has been updated",
                         showConfirmButton: false,
                         timer: 1500
                     });
                 }
-                if (data.modifiedCount===0) {
+                if (data.modifiedCount === 0) {
                     Swal.fire({
                         position: "top-end",
                         icon: "error",
@@ -57,7 +59,7 @@ const {user} = useContext(AuthContext);
                 }
             })
 
-       
+
     }
 
     return (
