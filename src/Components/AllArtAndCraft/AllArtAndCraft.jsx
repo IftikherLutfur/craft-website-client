@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { FaStarHalfAlt } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 

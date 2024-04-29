@@ -1,11 +1,8 @@
-import { useContext } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
 const UpdateData = () => {
-
-    // const { user } = useContext(AuthContext);
 
     const dataUpdate = useLoaderData();
     const { id } = useParams()

@@ -11,10 +11,7 @@ import CraftList from "./Components/CraftList/CraftList";
 import PrivateRoutes from "./Components/PrivateRoutes/PrivateRoutes";
 import UpdateData from "./Components/Update/UpdateData";
 import AllArtAndCraft from "./Components/AllArtAndCraft/AllArtAndCraft";
-import { GiPrivateFirstClass } from "react-icons/gi";
 import ViewDEtails from "./Components/ViewDetails/ViewDEtails";
-import ArtCraftCategory from "./Components/ArtCraftCategory/ArtCraftCategory";
-import CategoryDetails from "./Components/ArtCraftCategory/CategoryDetails";
 
   const router = createBrowserRouter([
     {
@@ -56,11 +53,11 @@ import CategoryDetails from "./Components/ArtCraftCategory/CategoryDetails";
           path:'/craft/:id',
           element:<PrivateRoutes><ViewDEtails></ViewDEtails></PrivateRoutes>,
           loader: () => fetch(`https://craft-server-site.vercel.app/craft`)
-        },
-        {
-          path:'/',
-          element:<PrivateRoutes><CategoryDetails></CategoryDetails></PrivateRoutes>
         }
+        // {
+        //   path:'/category',
+        //   element:<PrivateRoutes><CategoryDetails></CategoryDetails></PrivateRoutes>
+        // }
 
       ]
     },
