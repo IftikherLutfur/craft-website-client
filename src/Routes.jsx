@@ -46,19 +46,19 @@ import CategoryDetails from "./Components/ArtCraftCategory/CategoryDetails";
         {
           path:'/update/:id',
           element:<PrivateRoutes><UpdateData></UpdateData></PrivateRoutes>,
-      loader: ({params}) => fetch(`https://craft-server-site.vercel.app/craft/${params.id}`)
+      loader: () => fetch(`https://craft-server-site.vercel.app/craft`)
         },
         {
           path:'/all',
           element:<AllArtAndCraft></AllArtAndCraft>
         },
         {
-          path:'/details/:id',
+          path:'/craft/:id',
           element:<PrivateRoutes><ViewDEtails></ViewDEtails></PrivateRoutes>,
-          loader: ({params}) => fetch(`https://craft-server-site.vercel.app/craft/${params.id}`)
+          loader: () => fetch(`https://craft-server-site.vercel.app/craft`)
         },
         {
-          path:'/category',
+          path:'/',
           element:<PrivateRoutes><CategoryDetails></CategoryDetails></PrivateRoutes>
         }
 

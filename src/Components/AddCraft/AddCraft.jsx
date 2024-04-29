@@ -19,8 +19,8 @@ const AddCraft = () => {
         const stock = form.get('stock')
         const description = form.get('description')
         const userEmail = form.get('userEmail')
-        const name = form.get('name')
-        const craftInfo = { image, item, category, price, rating, custom, process, stock, description, userEmail, name }
+        const userName = form.get('userName')
+        const craftInfo = { image, item, category, price, rating, custom, process, stock, description, userEmail, userName }
         console.log(craftInfo);
         fetch('https://craft-server-site.vercel.app/craft', {
             method: "POST",

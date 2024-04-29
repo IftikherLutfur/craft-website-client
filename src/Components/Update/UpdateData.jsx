@@ -1,13 +1,17 @@
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const UpdateData = () => {
 
-    
+const {user} = useContext(AuthContext);    
 
     const dataUpdate = useLoaderData();
+    console.log(dataUpdate);
     const {image, _id, item, category, price, rating, custom, process, stock, description } =dataUpdate;
+
+
 
     const handleSignIn = e => {
         e.preventDefault()
@@ -23,7 +27,7 @@ const UpdateData = () => {
         const description = form.get('description')
         const craftInfo = { image, item, category, price, rating, custom, process, stock, description }
         console.log(craftInfo);
-        fetch(`https://craft-server-site.vercel.app/craft/${_id}`, {
+        fetch(`https://craft-server-site.vercel.app/craft/${user.userEmail}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"

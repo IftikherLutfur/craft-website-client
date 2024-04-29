@@ -18,6 +18,7 @@ const CraftList = () => {
             My Craft List:
             <div className="grid mx-6 my-8 grid-cols-2 gap-5">
                 
+                {list.length}
     
                 {
                     list.map(cr => <ViewCraftListData key={cr.

@@ -25,23 +25,29 @@ const Navbar = () => {
 						<h1 className="text-2xl font-bold">Crafty</h1>
 					</a>
 					<ul className="items-stretch hidden space-x-3 lg:flex">
-						<li className="flex">
-							<NavLink to='/'><a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border- dark:text-violet-600 dark:border-violet-600">Home</a></NavLink>
-						</li>
+
+	<li className="flex">
+		<NavLink className={({isActive}) => isActive? "text-pink-400" : ""} to='/'>
+		<a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">Home</a>
+	</NavLink>
+	</li>
 						
 						{	user&&<li className="flex">
-							<NavLink to='/addCraft'>
-								<a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">Add Product</a>
+							<NavLink className={({isActive}) => isActive? "text-pink-400" : ""} to='/addCraft'>
+                            <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">Add Item</a>
 							</NavLink>
 						</li>}
 
-						{user&&<li className="flex">
-							<NavLink to='/list'><a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">My Art&Craft List</a></NavLink>
+						{
+						user
+						&&
+						<li className="flex">
+							<NavLink className={({isActive}) => isActive? "text-pink-400" : ""} to='/list'><a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">My Art&Craft List</a></NavLink>
 						</li>
 						}
 
 						<li className="flex">
-			<NavLink to='/all'>
+			<NavLink className={({isActive}) => isActive? "text-pink-400" : ""} to='/all'>
 			<a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">All Art & Craft</a>
 							</NavLink>
 						</li>
