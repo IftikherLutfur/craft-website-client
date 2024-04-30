@@ -36,7 +36,7 @@ const SignUp = () => {
               });
         }
         else Swal.fire({
-            position: "top-end",
+            position: "top",
             icon: "success",
             title: "Registered Successfully",
             showConfirmButton: false,
@@ -69,7 +69,7 @@ const SignUp = () => {
                         <input
                             type="text"
                             name="name"
-                            placeholder="name"
+                            placeholder="Enter your name"
                             className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                     </div>
 
@@ -79,7 +79,7 @@ const SignUp = () => {
                         <input
                             type="email"
                             name="email"
-                            placeholder="name"
+                            placeholder="Enter your name"
                             className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                     </div>
 
@@ -89,7 +89,7 @@ const SignUp = () => {
                         <input
                             type="url"
                             name="image"
-                            placeholder="name"
+                            placeholder="Enter photo URL"
                             className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                     </div>
 
@@ -101,7 +101,7 @@ const SignUp = () => {
                         <input
                             type="password"
                             name="password"
-                            placeholder="Password"
+                            placeholder="Enter Password"
                             className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 
                         <div className="flex justify-end text-xs dark:text-gray-600">

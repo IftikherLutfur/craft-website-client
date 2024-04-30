@@ -25,7 +25,8 @@ const AllArtAndCraft = () => {
               <p><small>Process: </small>{it.process}</p>
               </div>
               <div className="w-full">
-               <NavLink to={`/craft/${it._id}`}><button className=" w-full btn btn-primary">View Details</button></NavLink>
+          <NavLink to={`/craft/${it._id}`}><button className=" w-full btn bg-pink-400">
+            View Details</button></NavLink>
               </div>
             </div>
           </div>)

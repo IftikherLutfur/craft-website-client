@@ -42,7 +42,7 @@ const Navbar = () => {
 						user
 						&&
 						<li className="flex">
-							<NavLink className={({isActive}) => isActive? "text-pink-400" : ""} to='/list'><a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">My Art&Craft List</a></NavLink>
+							<NavLink className={({isActive}) => isActive? "text-pink-400" : ""} to='/list'><a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">My List</a></NavLink>
 						</li>
 						}
 

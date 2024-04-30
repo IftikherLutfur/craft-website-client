@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const HomeCraft = () => {
 
@@ -19,6 +20,8 @@ const HomeCraft = () => {
                 <div className="card-body">
                   <h2 className="card-title">{dt.item}</h2>
                   <p>{dt.description}</p>
+                  <NavLink to={`/craft/${dt._id}`}><button className="btn w-full bg-pink-400">
+                    View Details</button></NavLink>
                  
                 </div>
               </div>)

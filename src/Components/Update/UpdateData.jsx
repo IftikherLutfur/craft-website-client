@@ -180,7 +180,7 @@ const UpdateData = () => {
 
                 </div>
 
-                <button className="block w-full p-3 text-center rounded-sm dark:text-gray-50 dark:bg-violet-600">Add</button>
+                <button className="block w-full p-3 text-center rounded-sm text-black bg-pink-400">Update</button>
             </form>
 
         </div>
