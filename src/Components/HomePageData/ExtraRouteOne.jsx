@@ -11,7 +11,7 @@ const ExtraRouteOne = () => {
 				</svg>
 				
 				<div className="space-y-2">
-					<p className="text-lg font-medium leading-snug">Artisan's Haven</p>
+					<p className="text-lg font-medium leading-snug">Heaven of Artisans</p>
 					<p className="leading-snug">Unleash your inner artist and let creativity flourish with our kaleidoscope of supplies at Artisan's Haven - where every brushstroke tells a story!</p>
 				</div>
 			</div>
