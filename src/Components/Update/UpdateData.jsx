@@ -181,7 +181,7 @@ const UpdateData = () => {
                 </div>
 
                 <button className="block w-full p-3 text-center rounded-sm text-black bg-pink-400">Update</button>
-            </form>
+            </form> 
 
         </div>
     );
