@@ -2,7 +2,6 @@ import { useContext} from "react";
 import ViewCraftListData from "./ViewCraftListData";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useLoaderData } from "react-router-dom";
-// import { useLoaderData } from "react-router-dom";
 
 const CraftList = () => {
     const {user} = useContext(AuthContext)
