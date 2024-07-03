@@ -1,6 +1,4 @@
-import { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { AuthContext } from "../AuthProvider/AuthProvider";
+
 
 const ArtCraftCategory = () => {
 
@@ -12,7 +10,7 @@ const ArtCraftCategory = () => {
             <h1 className="text-2xl font-semibold my-5 text-center">Our Categories</h1>
         <div className="grid grid-cols-3 gap-5 space-y-3 my-5 ml-16">
            <div className="card w-80 h-64 bg-base-100 shadow-xl image-full">
-                <figure><img src="https://cdn.shopify.com/s/files/1/0625/3818/6989/files/1_07e7770a-7a1a-4dfe-83be-b502b2d47d57.jpg?v=1677310581" alt="Shoes" /></figure>
+                <figure><img src="https://art4you.ie/wp-content/uploads/2021/01/IMG_20210109_144030-1000x657.jpg" alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="text-2xl font-semibold text-center my-12">Landscape Painting</h2>
                    
