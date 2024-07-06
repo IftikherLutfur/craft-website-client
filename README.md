@@ -15,8 +15,11 @@ This project is a web application allowing users to add items and view associate
 
 ## Features:
 1.Item Addition: Users can add items to the website.
+
 2.Display Routes: All craft routes are displayed after an item is added.
+
 3.My List Routes: Users can view a personal list of added items.
+
 4.Edit Items: Users can edit items in their personal list.
 
 ## What problem i solved mainly
@@ -24,11 +27,17 @@ The project addresses the need for a user-friendly interface where users can add
 
 ## Technologies:
 1.HTML: Markup language for structuring the website.
+
 2.CSS: Stylesheet language for designing the website.
+
 3.Tailwind CSS: Utility-first CSS framework for styling.
+
 4.JavaScript: Programming language for website interactivity.
+
 5.React JS: JavaScript library for building user interfaces.
+
 6.Firebase: Platform for authentication, hosting, and database management.
+
 7.MongoDB: NoSQL database for storing user and article data.
 
 ## What can you hav to do, if you can run this project locally
