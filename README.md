@@ -1,13 +1,22 @@
 
 ## Project Overview:
-1.This is a handcraft website: This is a handcrafted website where users can explore and purchase unique handmade items from various artisans and crafters
-2.Registrtion: First entry you must be register. Otherwise you don't reach the all features
-3.Buy Handcraft: You Can buy anyone.
+This project is a web application allowing users to add items and view associated craft routes. Users have a personalized list where they can edit their added items. The front-end is built with React.js, the database is managed with MongoDB, and Firebase handles authentication. Node.js is used for the backend server.
+
+## Concepts
+1.CRUD Operations: Creating, reading, updating, and deleting items.
+2.Routing: Managing different routes for displaying and editing items.
+3.Authentication: Using Firebase for user login and secure access.
+4.Database Management: Storing and retrieving item data with MongoDB.
+5.Front-end Development: Creating an interactive user interface with React.js.
 
 ## Features:
-1.All Craft: A section where you see all craft.
-2.View Details: There you can see the all details
-3.Buy any craft: You can buy here
+1.Item Addition: Users can add items to the website.
+2.Display Routes: All craft routes are displayed after an item is added.
+3.My List Routes: Users can view a personal list of added items.
+4.Edit Items: Users can edit items in their personal list.
+
+## What problem i solved mainly
+The project addresses the need for a user-friendly interface where users can add and manage items, providing a streamlined way to track and edit their contributions.
 
 ## Technologies:
 1.HTML: Markup language for structuring the website.
