@@ -4,9 +4,13 @@ This project is a web application allowing users to add items and view associate
 
 ## Concepts
 1.CRUD Operations: Creating, reading, updating, and deleting items.
+
 2.Routing: Managing different routes for displaying and editing items.
+
 3.Authentication: Using Firebase for user login and secure access.
+
 4.Database Management: Storing and retrieving item data with MongoDB.
+
 5.Front-end Development: Creating an interactive user interface with React.js.
 
 ## Features:
