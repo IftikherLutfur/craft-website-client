@@ -56,7 +56,15 @@ const SignUp = () => {
 
 
     return (
-        <div>
+        <div 
+  className="mx-auto pt-20 w-full p-8 space-y-3 rounded-xl dark:bg-gray-50 text-white"
+  style={{
+    backgroundImage: "url('https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?q=80&w=1938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
             <div className=" mx-auto my-8 w-[500px] p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800">
                 <h1 className="text-2xl font-bold text-center">Register</h1>
 
@@ -70,7 +78,7 @@ const SignUp = () => {
                             type="text"
                             name="name"
                             placeholder="Enter your name"
-                            className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 text-black focus:dark:border-violet-600" />
                     </div>
 
                     <div className="space-y-1 text-sm">
@@ -80,7 +88,7 @@ const SignUp = () => {
                             type="email"
                             name="email"
                             placeholder="Enter your name"
-                            className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 text-black focus:dark:border-violet-600" />
                     </div>
 
                     <div className="space-y-1 text-sm">
@@ -90,7 +98,7 @@ const SignUp = () => {
                             type="url"
                             name="image"
                             placeholder="Enter photo URL"
-                            className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 text-black focus:dark:border-violet-600" />
                     </div>
 
 
@@ -102,13 +110,13 @@ const SignUp = () => {
                             type="password"
                             name="password"
                             placeholder="Enter Password"
-                            className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 text-black focus:dark:border-violet-600" />
 
                         <div className="flex justify-end text-xs dark:text-gray-600">
                             <a rel="noopener noreferrer" href="#">Forgot Password?</a>
                         </div>
                     </div>
-                    <button className="block w-full p-3 text-center rounded-sm dark:text-gray-50 dark:bg-violet-600">Register</button>
+                    <button className="block w-full p-3 text-center rounded-sm dark:text-gray-50 bg-zinc-900">Register</button>
                 </form>
                 
                 <div className="flex items-center pt-4 space-x-1">
@@ -116,7 +124,7 @@ const SignUp = () => {
                     <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>
                 </div>
                 
-                <p className="text-xs text-center sm:px-6 dark:text-gray-600">Have an account?
+                <p className="font-bold text-center sm:px-6 dark:text-gray-600">Have an account?
                    <Link to='/in'> <a rel="noopener noreferrer" href="#" className="underline dark:text-gray-800">Sign in</a></Link>
                 </p>
             </div>

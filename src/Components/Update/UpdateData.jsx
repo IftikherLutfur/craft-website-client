@@ -60,12 +60,12 @@ const UpdateData = () => {
     }
 
     return (
-        <div>
-            This is the update page
+        <div className="pt-20 px-5">
+            <h1 className="text-2xl font-semibold text-center">Update Data</h1>
 
             <form onSubmit={handleSignIn} className="space-y-6">
 
-                <div className="grid grid-cols-2 gap-5 px-5">
+                <div className="grid grid-cols-2 gap-5 ">
                     <div className="space-y-1 text-sm">
                         <label htmlFor="username" className="block dark:text-gray-600">Image</label>
 
@@ -74,7 +74,7 @@ const UpdateData = () => {
                             name="image"
                             placeholder="PHoto URL"
                             defaultValue={image}
-                            className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full border-2 px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                     </div>
 
                     <div className="space-y-1 text-sm">
@@ -85,7 +85,7 @@ const UpdateData = () => {
                             name="item"
                             placeholder="name"
                             defaultValue={item}
-                            className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full border-2 px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                     </div>
 
                     <div className="space-y-1 text-sm">
@@ -96,7 +96,7 @@ const UpdateData = () => {
                             name="category"
                             placeholder="name"
                             defaultValue={category}
-                            className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full border-2 px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                     </div>
 
 
@@ -109,7 +109,7 @@ const UpdateData = () => {
                             name="price"
                             placeholder="Price"
                             defaultValue={price}
-                            className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full border-2 px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 
                     </div>
 
@@ -123,7 +123,7 @@ const UpdateData = () => {
                             name="rating"
                             placeholder="rating"
                             defaultValue={rating}
-                            className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full border-2 px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 
                     </div>
 
@@ -136,7 +136,7 @@ const UpdateData = () => {
                             name="custom"
                             placeholder="yes/no"
                             defaultValue={custom}
-                            className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full border-2 px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 
                     </div>
                     <div className="space-y-1 text-sm">
@@ -148,7 +148,7 @@ const UpdateData = () => {
                             name="process"
                             placeholder="time"
                             defaultValue={process}
-                            className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full border-2 px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 
                     </div>
 
@@ -161,7 +161,7 @@ const UpdateData = () => {
                             name="stock"
                             placeholder=" In stock/Made to Order"
                             defaultValue={stock}
-                            className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full border-2 px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 
                     </div>
                     <div className="space-y-1 text-sm col-span-2">
@@ -173,14 +173,14 @@ const UpdateData = () => {
                             name="description"
                             placeholder="Description"
                             defaultValue={description}
-                            className="w-full px-4 py-3 rounded-md 
+                            className="w-full border-2 px-4 py-3 rounded-md 
                             dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 
                     </div>
 
                 </div>
+                <button className="block w-full p-3 text-center rounded-sm text-white bg-zinc-900 ">Update</button>
 
-                <button className="block w-full p-3 text-center rounded-sm text-black bg-pink-400">Update</button>
             </form> 
 
         </div>

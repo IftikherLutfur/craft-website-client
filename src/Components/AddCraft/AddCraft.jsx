@@ -44,118 +44,113 @@ const AddCraft = () => {
             })
     }
     return (
-        <div className="mx-10 border-2 my-5 p-4 rounded-xl border-purple-300">
+        <div className="mx-10  pt-16 p-4 rounded-xl">
 
-            <h1 className="text-2xl font-bold my-4 text-center">Add Product</h1>
-           <div className="flex justify-around">
-
-           <h2 className="  rounded-t-2xl  bg-orange-300 px-14 py-3 font-bold text-center">Name: {user.displayName}</h2>
-            <h2 className=" rounded-t-2xl  bg-orange-300 px-14 py-3 font-bold text-center">Email: {user.email}</h2>
-           </div>
+            <h1 className="text-2xl font-bold my-4 text-center text-Black">Add Product</h1>
 
             <form onSubmit={handleSignIn} className="space-y-6">
 
                 <div className="grid grid-cols-2 gap-5 px-5">
                     <div className="space-y-1 text-sm">
-                        <label htmlFor="username" className="block dark:text-gray-600">Image</label>
+                        <label htmlFor="username" className="block text-Black">Image</label>
 
                         <input
                             type="url"
                             name="image"
                             placeholder="Photo URL"
-                            className="w-full px-4 py-3 rounded-md border-2 border-orange-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                     </div>
 
                     <div className="space-y-1 text-sm">
-                        <label htmlFor="username" className="block dark:text-gray-600">Name <small>(Item)</small></label>
+                        <label htmlFor="username" className="block text-Black">Name <small>(Item)</small></label>
 
                         <input
                             type="text"
                             name="item"
                             placeholder="Item Name"
-                            className="w-full px-4 py-3 rounded-md border-2 border-orange-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                     </div>
 
                     <div className="space-y-1 text-sm">
-                        <label htmlFor="username" className="block dark:text-gray-600">Name <small>(Sub Category)</small></label>
+                        <label htmlFor="username" className="block text-Black">Name <small>(Sub Category)</small></label>
 
                         <input
                             type="text"
                             name="category"
                             placeholder="Category Name"
-                            className="w-full px-4 py-3 rounded-md border-2 border-orange-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                     </div>
 
 
                     <div className="space-y-1 text-sm">
 
-                        <label htmlFor="password" className="block dark:text-gray-600">Price</label>
+                        <label htmlFor="password" className="block text-Black">Price</label>
 
                         <input
                             type="text"
                             name="price"
                             placeholder="Price"
-                            className="w-full px-4 py-3 rounded-md border-2 border-orange-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 
                     </div>
 
 
                     <div className="space-y-1 text-sm">
 
-                        <label htmlFor="password" className="block dark:text-gray-600">Rating</label>
+                        <label htmlFor="password" className="block text-Black">Rating</label>
 
                         <input
                             type="text"
                             name="rating"
                             placeholder="rating"
-                            className="w-full px-4 py-3 rounded-md border-2 border-orange-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 
                     </div>
 
                     <div className="space-y-1 text-sm">
 
-                        <label htmlFor="password" className="block dark:text-gray-600">Customization</label>
+                        <label htmlFor="password" className="block text-Black">Customization</label>
 
                         <input
                             type="text"
                             name="custom"
                             placeholder="yes/no"
-                            className="w-full px-4 py-3 rounded-md border-2 border-orange-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 
                     </div>
                     <div className="space-y-1 text-sm">
 
-                        <label htmlFor="password" className="block dark:text-gray-600">Processing Time</label>
+                        <label htmlFor="password" className="block text-Black">Processing Time</label>
 
                         <input
                             type="text"
                             name="process"
                             placeholder="time"
-                            className="w-full px-4 py-3 rounded-md border-2 border-orange-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 
                     </div>
 
                     <div className="space-y-1 text-sm">
 
-                        <label htmlFor="password" className="block dark:text-gray-600">Stock Status</label>
+                        <label htmlFor="password" className="block text-Black">Stock Status</label>
 
                         <input
                             type="text"
                             name="stock"
                             placeholder=" In stock/Made to Order"
-                            className="w-full px-4 py-3 rounded-md border-2 border-orange-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 
                     </div>
 
                     <div className=" space-y-1 text-sm col-span-2">
 
-                        <label htmlFor="password" className="block dark:text-gray-600">Description</label>
+                        <label htmlFor="password" className="block text-Black">Description</label>
 
                         <input
                             type="text"
                             name="description"
                             placeholder="Description"
-                            className=" border-2 border-orange-300 w-full px-4 py-3 rounded-md dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className=" border-2  w-full px-4 py-3 rounded-md dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
 
                     </div>
 
@@ -163,33 +158,33 @@ const AddCraft = () => {
 
                     <div className=" space-y-1 text-sm">
 
-                        <label htmlFor="password" className="block dark:text-gray-600"></label>
+                        <label htmlFor="password" className="block text-Black">Your Email</label>
 
                         <input
                             type="text"
                             name="userEmail"
                             placeholder="Description"
                             defaultValue={user?.email}
-                            className=" border-2 border-orange-300 w-full px-4 py-3 rounded-md dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className=" border-2  w-full px-4 py-3 rounded-md bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" disabled />
 
                     </div>
                     <div className=" space-y-1 text-sm ">
 
-                        <label htmlFor="password" className="block dark:text-gray-600"></label>
+                        <label htmlFor="password" className="block text-Black">Your Name</label>
 
                         <input
                             type="text"
                             name="name"
                             placeholder="Description"
                             defaultValue={user?.displayName}
-                            className=" border-2 border-orange-300 w-full px-4 py-3 rounded-md dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className=" border-2  w-full px-4 py-3 rounded-md bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" disabled />
 
                     </div>
 
 
                 </div>
 
-                <button className="block w-full p-3 text-center rounded-sm dark:text-gray-50 bg-orange-400">Add Product</button>
+                <button className="block w-full p-3 text-center rounded-sm text-Black bg-zinc-900">Add Product</button>
             </form>
         </div>
     );

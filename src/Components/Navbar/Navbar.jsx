@@ -18,8 +18,40 @@ const Navbar = () => {
 
 	return (
 		<div>
+			
+			<header className="py-2 bg-opacity-70 fixed z-10 w-full bg-black text-white">
 
-			<header className="p-4 dark:bg-gray-100 dark:text-gray-800">
+	<div className="container flex justify-between h-16 mx-auto">
+		<a rel="noopener noreferrer" href="#" aria-label="Back to homepage" className="flex items-center p-2">
+			
+		</a>
+		<ul className="items-stretch hidden space-x-3 lg:flex">
+			<li className="flex">
+				<a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1  dark:border- dark:text-violet-600 dark:border-violet-600"><NavLink to={'/'}>Home</NavLink></a>
+			</li>
+			<li className="flex">
+				<a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1  dark:border-"><NavLink to={'addCraft'}>Add Craft</NavLink></a>
+			</li>
+			<li className="flex">
+				<a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1  dark:border-"><NavLink to={'/list'}>My List</NavLink></a>
+			</li>
+			<li className="flex">
+				<a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1  dark:border-"><NavLink to={'/all'}>All Art & Craft</NavLink></a>
+			</li>
+		</ul>
+		<div className="items-center flex-shrink-0 hidden lg:flex">
+			{user ?<button onClick={userLogOut}>Logout</button> : <div><button className="self-center px-8 py-3 rounded"><NavLink to={'/in'}>Sign in</NavLink></button>
+			<button className="self-center px-8 py-3 rounded dark:bg-violet-600 dark:text-gray-50"><NavLink to={'/up'}>Register</NavLink></button></div>}
+		</div>
+		<button className="p-4 lg:hidden">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-gray-800">
+				<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+			</svg>
+		</button>
+	</div>
+</header>
+
+			{/* <header className="p-4 dark:bg-gray-100 dark:text-gray-800">
 				<div className="container flex justify-between h-16 mx-auto">
 					<a rel="noopener noreferrer" href="#" aria-label="Back to homepage" className="flex items-center p-2">
 						<h1 className="text-2xl font-bold">Crafty</h1>
@@ -28,13 +60,13 @@ const Navbar = () => {
 
 	<li className="flex">
 		<NavLink className={({isActive}) => isActive? "text-pink-400" : ""} to='/'>
-		<a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">Home</a>
+		<a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1  dark:border-">Home</a>
 	</NavLink>
 	</li>
 						
 						{	user&&<li className="flex">
 							<NavLink className={({isActive}) => isActive? "text-pink-400" : ""} to='/addCraft'>
-                            <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">Add Item</a>
+                            <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1  dark:border-">Add Item</a>
 							</NavLink>
 						</li>}
 
@@ -42,13 +74,13 @@ const Navbar = () => {
 						user
 						&&
 						<li className="flex">
-							<NavLink className={({isActive}) => isActive? "text-pink-400" : ""} to='/list'><a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">My List</a></NavLink>
+							<NavLink className={({isActive}) => isActive? "text-pink-400" : ""} to='/list'><a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1  dark:border-">My List</a></NavLink>
 						</li>
 						}
 
 						<li className="flex">
 			<NavLink className={({isActive}) => isActive? "text-pink-400" : ""} to='/all'>
-			<a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-">All Art & Craft</a>
+			<a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1  dark:border-">All Art & Craft</a>
 							</NavLink>
 						</li>
 					</ul>
@@ -84,13 +116,9 @@ const Navbar = () => {
 						}
 
 					</div>
-					{/* <button className="p-4 lg:hidden">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-gray-800">
-				<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-			</svg>
-		</button> */}
+					
 				</div>
-			</header>
+			</header> */}
 
 		</div>
 	);

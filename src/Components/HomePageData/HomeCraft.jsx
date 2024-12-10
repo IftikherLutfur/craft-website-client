@@ -13,14 +13,14 @@ const HomeCraft = () => {
 
 
     return (
-        <div className="grid grid-cols-3 mx-9 hover:border-2 space-y-3">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2sm:grid-cols-1 space-x-5 space-y-5  mx-4">
             {
-                data.slice(0,6).map(dt=><div key={dt._id} className=" card card-compact w-96 bg-base-100 shadow-xl">
-                <figure><img className="h-[380px] w-full" src={dt.image} alt="Shoes" /></figure>
+                data.slice(0,6).map(dt=><div key={dt._id} className=" p-2 bg-slate-800 shadow-xl">
+                <figure><img className="h-[280px] w-full" src={dt.image} alt="card" /></figure>
                 <div className="card-body">
                   <h2 className="card-title">{dt.item}</h2>
-                  <p>{dt.description}</p>
-                  <NavLink to={`/craft/${dt._id}`}><button className="btn w-full bg-pink-400">
+                 
+                  <NavLink to={`/craft/${dt._id}`}><button className=" py-1 w-full bg-purple-700 text-white">
                     View Details</button></NavLink>
                  
                 </div>

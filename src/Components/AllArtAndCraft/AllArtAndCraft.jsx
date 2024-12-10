@@ -16,7 +16,7 @@ const AllArtAndCraft = () => {
             {
             item.map(it=><div key={it._id} className="card card-compact w-96 bg-base-100 shadow-xl">
             <figure><img className="h-[350px] w-full" src={it.image} alt="Card" /></figure>
-            <div className="card-body">
+            <div className="">
               <h2 className=" text-center text-xl font-bold">{it.item}</h2>
               <p className="text-center font-bold"> {it.category}</p>
               <div className=" text-xl opacity-90 ml-5">
