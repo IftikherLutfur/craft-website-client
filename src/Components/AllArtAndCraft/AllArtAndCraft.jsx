@@ -12,9 +12,9 @@ const AllArtAndCraft = () => {
     },[])
 
     return (
-        <div className="grid grid-cols-3 gap-3 space-y-3 mx-5 my">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-3 space-y-3 mx-5 pt-20 mb-5 text-white">
             {
-            item.map(it=><div key={it._id} className="card card-compact w-96 bg-base-100 shadow-xl">
+            item.map(it=><div key={it._id} className="card card-compact w-96 shadow-2xl bg-zinc-800">
             <figure><img className="h-[350px] w-full" src={it.image} alt="Card" /></figure>
             <div className="">
               <h2 className=" text-center text-xl font-bold">{it.item}</h2>
@@ -25,7 +25,7 @@ const AllArtAndCraft = () => {
               <p><small>Process: </small>{it.process}</p>
               </div>
               <div className="w-full">
-          <NavLink to={`/craft/${it._id}`}><button className=" w-full btn bg-pink-400">
+          <NavLink to={`/craft/${it._id}`}><button className=" w-full text-wite bg-violet-600">
             View Details</button></NavLink>
               </div>
             </div>

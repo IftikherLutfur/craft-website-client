@@ -47,29 +47,27 @@ console.log(userEmail)
     }
 
     return (
-        <div>
-            <div className=" gap-48 border-2 bg-slate-100 rounded-xl hover:border-sky-400 px-4 py-2">
-                <div className="flex gap-5">
-                    <div>
-                        <img src={image} className="w-[250px] h-[230px]" alt="" />
+        <div className="">
+            <div className=" border-2 ">
+               
+                  <div className="w-full">
+                    <img src={image} alt="" />
+                    <div className="">
+                    <p className="font-semibold">Category: {category}</p>
+                    <p className="font-semibold">Price: {price}</p>
+                    <p className="font-semibold">Rating: {rating}</p>
+                    <p className="font-semibold">Custom: {custom}</p>
+                    <p className="font-semibold">Stock: {stock}</p>
+                    <p className="font-semibold">Making Days{process}</p>
+                    <p className="font-semibold">Item: {item}</p>
                     </div>
+                    
+                  </div>
 
-                    <div className="space-y-2">
-                        <p className="font-bold">Name:  {item}</p>
-                        <p className="font-bold">Category: {category}</p>
-                        <p className="font-bold">Price: {price}</p>
-                        <p className="font-bold">Rating: {rating}</p>
-                        <p className="font-bold">Customization: {custom}</p>
-                        <p className="font-bold">Stock: {stock}</p>
-                        <p className="font-bold">Process Time: {process}</p>
-
-                    </div>
-                </div>
-
-                <div className="flex ml-12 my-2 gap-5 mr-5">
+                <div className="flex justify-center my-2 gap-20 mr-5">
                     <NavLink to={`/update/${_id}`}>
-                        <button className="btn w-full join-item bg-sky-400">Update</button>
-                    </NavLink><button onClick={() => handleDelete(_id)} className="btn join-item bg-orange-500">Delete</button>
+                        <button className="bg-violet-600 text-white rounded-md px-2 py-1">Update</button>
+                    </NavLink><button onClick={() => handleDelete(_id)} className="  text-white bg-red-600 rounded-md px-2 py-1">Delete</button>
                 </div>
             </div>
         </div>

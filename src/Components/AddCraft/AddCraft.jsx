@@ -44,13 +44,13 @@ const AddCraft = () => {
             })
     }
     return (
-        <div className="mx-10  pt-16 p-4 rounded-xl">
+        <div className="mx-10  pt-16 p-4 rounded-xl text-white">
 
             <h1 className="text-2xl font-bold my-4 text-center text-Black">Add Product</h1>
 
             <form onSubmit={handleSignIn} className="space-y-6">
 
-                <div className="grid grid-cols-2 gap-5 px-5">
+                <div className="grid grid-cols-2 gap-5">
                     <div className="space-y-1 text-sm">
                         <label htmlFor="username" className="block text-Black">Image</label>
 
@@ -58,7 +58,7 @@ const AddCraft = () => {
                             type="url"
                             name="image"
                             placeholder="Photo URL"
-                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 text-black focus:dark:border-violet-600" />
                     </div>
 
                     <div className="space-y-1 text-sm">
@@ -68,7 +68,7 @@ const AddCraft = () => {
                             type="text"
                             name="item"
                             placeholder="Item Name"
-                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 text-black focus:dark:border-violet-600" />
                     </div>
 
                     <div className="space-y-1 text-sm">
@@ -78,7 +78,7 @@ const AddCraft = () => {
                             type="text"
                             name="category"
                             placeholder="Category Name"
-                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 text-black focus:dark:border-violet-600" />
                     </div>
 
 
@@ -90,7 +90,7 @@ const AddCraft = () => {
                             type="text"
                             name="price"
                             placeholder="Price"
-                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 text-black focus:dark:border-violet-600" />
 
                     </div>
 
@@ -103,7 +103,7 @@ const AddCraft = () => {
                             type="text"
                             name="rating"
                             placeholder="rating"
-                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 text-black focus:dark:border-violet-600" />
 
                     </div>
 
@@ -115,7 +115,7 @@ const AddCraft = () => {
                             type="text"
                             name="custom"
                             placeholder="yes/no"
-                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 text-black focus:dark:border-violet-600" />
 
                     </div>
                     <div className="space-y-1 text-sm">
@@ -126,7 +126,7 @@ const AddCraft = () => {
                             type="text"
                             name="process"
                             placeholder="time"
-                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 text-black focus:dark:border-violet-600" />
 
                     </div>
 
@@ -138,7 +138,7 @@ const AddCraft = () => {
                             type="text"
                             name="stock"
                             placeholder=" In stock/Made to Order"
-                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className="w-full px-4 py-3 rounded-md border-2  dark:bg-gray-50 text-black focus:dark:border-violet-600" />
 
                     </div>
 
@@ -150,7 +150,7 @@ const AddCraft = () => {
                             type="text"
                             name="description"
                             placeholder="Description"
-                            className=" border-2  w-full px-4 py-3 rounded-md dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            className=" border-2  w-full px-4 py-3 rounded-md dark:bg-gray-50 text-black focus:dark:border-violet-600" />
 
                     </div>
 
@@ -165,7 +165,7 @@ const AddCraft = () => {
                             name="userEmail"
                             placeholder="Description"
                             defaultValue={user?.email}
-                            className=" border-2  w-full px-4 py-3 rounded-md bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" disabled />
+                            className=" border-2  w-full px-4 py-3 rounded-md bg-gray-50 text-black focus:dark:border-violet-600" disabled />
 
                     </div>
                     <div className=" space-y-1 text-sm ">
@@ -177,14 +177,14 @@ const AddCraft = () => {
                             name="name"
                             placeholder="Description"
                             defaultValue={user?.displayName}
-                            className=" border-2  w-full px-4 py-3 rounded-md bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" disabled />
+                            className=" border-2  w-full px-4 py-3 rounded-md bg-gray-50 text-black focus:dark:border-violet-600" disabled />
 
                     </div>
 
 
                 </div>
 
-                <button className="block w-full p-3 text-center rounded-sm text-Black bg-zinc-900">Add Product</button>
+                <button className="block w-full  p-3 text-center rounded-sm text-white bg-violet-600 border-2">Add Product</button>
             </form>
         </div>
     );

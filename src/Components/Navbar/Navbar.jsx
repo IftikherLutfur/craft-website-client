@@ -1,10 +1,11 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Navbar = () => {
 
 	const { user, logOut } = useContext(AuthContext);
+    const [menuOpen, setMenuOpen] = useState(false);
 
 	const userLogOut = () => {
 		logOut()
@@ -19,106 +20,171 @@ const Navbar = () => {
 	return (
 		<div>
 			
-			<header className="py-2 bg-opacity-70 fixed z-10 w-full bg-black text-white">
-
-	<div className="container flex justify-between h-16 mx-auto">
-		<a rel="noopener noreferrer" href="#" aria-label="Back to homepage" className="flex items-center p-2">
 			
-		</a>
-		<ul className="items-stretch hidden space-x-3 lg:flex">
-			<li className="flex">
-				<a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1  dark:border- dark:text-violet-600 dark:border-violet-600"><NavLink to={'/'}>Home</NavLink></a>
-			</li>
-			<li className="flex">
-				<a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1  dark:border-"><NavLink to={'addCraft'}>Add Craft</NavLink></a>
-			</li>
-			<li className="flex">
-				<a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1  dark:border-"><NavLink to={'/list'}>My List</NavLink></a>
-			</li>
-			<li className="flex">
-				<a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1  dark:border-"><NavLink to={'/all'}>All Art & Craft</NavLink></a>
-			</li>
-		</ul>
-		<div className="items-center flex-shrink-0 hidden lg:flex">
-			{user ?<button onClick={userLogOut}>Logout</button> : <div><button className="self-center px-8 py-3 rounded"><NavLink to={'/in'}>Sign in</NavLink></button>
-			<button className="self-center px-8 py-3 rounded dark:bg-violet-600 dark:text-gray-50"><NavLink to={'/up'}>Register</NavLink></button></div>}
-		</div>
-		<button className="p-4 lg:hidden">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-gray-800">
-				<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-			</svg>
-		</button>
-	</div>
-</header>
+			<header className="py-2 bg-opacity-70 fixed z-10 w-full bg-black text-white">
+      <div className="container flex justify-between h-16 mx-auto">
+        <a
+          rel="noopener noreferrer"
+          href="#"
+          aria-label="Back to homepage"
+          className="flex items-center p-2"
+        >
+          {/* Add a logo or brand name here */}
+          <span className="text-xl font-bold">CRAFTY</span>
+        </a>
 
-			{/* <header className="p-4 dark:bg-gray-100 dark:text-gray-800">
-				<div className="container flex justify-between h-16 mx-auto">
-					<a rel="noopener noreferrer" href="#" aria-label="Back to homepage" className="flex items-center p-2">
-						<h1 className="text-2xl font-bold">Crafty</h1>
-					</a>
-					<ul className="items-stretch hidden space-x-3 lg:flex">
+        {/* Desktop Menu */}
+        <ul className="items-stretch hidden space-x-3 lg:flex">
+          <li className="flex">
+            <NavLink
+              to="/"
+              className="flex items-center px-4 -mb-1 dark:text-violet-600 dark:border-violet-600"
+            >
+              Home
+            </NavLink>
+          </li>
+          <li className="flex">
+            <NavLink
+              to="/addCraft"
+              className="flex items-center px-4 -mb-1"
+            >
+              Add Craft
+            </NavLink>
+          </li>
+          <li className="flex">
+            <NavLink
+              to="/list"
+              className="flex items-center px-4 -mb-1"
+            >
+              My List
+            </NavLink>
+          </li>
+          <li className="flex">
+            <NavLink
+              to="/all"
+              className="flex items-center px-4 -mb-1"
+            >
+              All Art & Craft
+            </NavLink>
+          </li>
+        </ul>
 
-	<li className="flex">
-		<NavLink className={({isActive}) => isActive? "text-pink-400" : ""} to='/'>
-		<a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1  dark:border-">Home</a>
-	</NavLink>
-	</li>
-						
-						{	user&&<li className="flex">
-							<NavLink className={({isActive}) => isActive? "text-pink-400" : ""} to='/addCraft'>
-                            <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1  dark:border-">Add Item</a>
-							</NavLink>
-						</li>}
+        {/* User Actions */}
+        <div className="items-center flex-shrink-0 hidden lg:flex">
+          {user ? (
+            <button onClick={userLogOut} className="px-4 py-2 rounded bg-red-500 text-white">
+              Logout
+            </button>
+          ) : (
+            <div className="flex space-x-4">
+              <button className="self-center px-4 py-2 rounded bg-gray-700 text-white">
+                <NavLink to="/in">Sign in</NavLink>
+              </button>
+              <button className="self-center px-4 py-2 rounded bg-violet-600 text-white">
+                <NavLink to="/up">Register</NavLink>
+              </button>
+            </div>
+          )}
+        </div>
 
-						{
-						user
-						&&
-						<li className="flex">
-							<NavLink className={({isActive}) => isActive? "text-pink-400" : ""} to='/list'><a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1  dark:border-">My List</a></NavLink>
-						</li>
-						}
+        {/* Mobile Menu Button */}
+        <button
+          className="p-4 lg:hidden"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle Menu"
+          aria-expanded={menuOpen}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            className="w-6 h-6 text-white"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
 
-						<li className="flex">
-			<NavLink className={({isActive}) => isActive? "text-pink-400" : ""} to='/all'>
-			<a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1  dark:border-">All Art & Craft</a>
-							</NavLink>
-						</li>
-					</ul>
-					<div className="items-center flex-shrink-0 hidden lg:flex">
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <ul className="space-y-3 mt-4 bg-black text-white lg:hidden transition-transform duration-300">
+          <li>
+            <NavLink
+              to="/"
+              className="block px-4 py-2"
+              onClick={() => setMenuOpen(false)}
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/addCraft"
+              className="block px-4 py-2"
+              onClick={() => setMenuOpen(false)}
+            >
+              Add Craft
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/list"
+              className="block px-4 py-2"
+              onClick={() => setMenuOpen(false)}
+            >
+              My List
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/all"
+              className="block px-4 py-2"
+              onClick={() => setMenuOpen(false)}
+            >
+              All Art & Craft
+            </NavLink>
+          </li>
+          <li>
+            {user ? (
+              <button
+                onClick={() => {
+                  userLogOut();
+                  setMenuOpen(false);
+                }}
+                className="block px-4 py-2 text-red-500"
+              >
+                Logout
+              </button>
+            ) : (
+              <>
+                <NavLink
+                  to="/in"
+                  className="block px-4 py-2"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Sign in
+                </NavLink>
+                <NavLink
+                  to="/up"
+                  className="block px-4 py-2 bg-violet-600 text-white rounded"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Register
+                </NavLink>
+              </>
+            )}
+          </li>
+        </ul>
+      )}
+    </header>
 
-						{user ?
-							<div className="dropdown dropdown-end">
-
-								<div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-									<div className="w-10 rounded-full">
-										<img alt="Tailwind CSS Navbar component" src={user.photoURL} />
-									</div>
-								</div>
-								<ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-									<li>
-										<li><a>{user.displayName}</a></li>
-										<a className="justify-between">
-											Profile
-											<span className="badge">New</span>
-										</a>
-									</li>
-									<button onClick={userLogOut}><li><a>Logout</a></li></button>
-								</ul>
-							</div>
-							:
-							<div>
-								<NavLink to="/in"><button className="self-center px-8 py-3 rounded">Sign in</button></NavLink>
-								<NavLink to="/up">
-									<button className="self-center px-8 py-3 font-semibold rounded dark:bg-violet-600 dark:text-gray-50">Sign up</button>
-								</NavLink>
-							</div>
-
-						}
-
-					</div>
-					
-				</div>
-			</header> */}
+			
 
 		</div>
 	);

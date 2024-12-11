@@ -60,7 +60,7 @@ const UpdateData = () => {
     }
 
     return (
-        <div className="pt-20 px-5">
+        <div className="pt-20 mb-5 px-5">
             <h1 className="text-2xl font-semibold text-center">Update Data</h1>
 
             <form onSubmit={handleSignIn} className="space-y-6">

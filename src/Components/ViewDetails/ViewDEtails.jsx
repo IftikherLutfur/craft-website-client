@@ -8,12 +8,12 @@ const ViewDEtails = () => {
     const card = cards.find(bk => bk._id === id)
 
     return (
-        <div>
-    <div className="flex gap-10 w-[1200px] mx-7 my-10 rounded-xl border-2 border-orange-400 p-5">
-        <div className="">
+        <div className="pt-20 text-white">
+    <div className="flex gap-10 w-[1200px] mx-7 mb-5 pt-20 rounded-xl hover:border-orange-400 hover:border-2 p-5">
+        <div className="flex-1">
             <img className="w-[1200px] h-full rounded-md" src={card.image} alt="" />
         </div>
-        <div>
+        <div className="flex-1">
            <h1 className="text-2xl"><em>Name:</em> {card.item}</h1>
            <h1 className="text-2xl"> <em>Category:</em> {card.category}</h1>
            <p className="text-xl font-semibold"><em className="opacity-85">Price: </em> {card.price}</p>
@@ -25,7 +25,7 @@ const ViewDEtails = () => {
         </div>
           <div className="">
           <NavLink to='/all'>
-            <button className=" btn bg-orange-300 flex"><FaArrowAltCircleLeft> </FaArrowAltCircleLeft>Back</button></NavLink>
+            <button className=" btn bg-zinc-800 p-3 flex items-center gap-1"><FaArrowAltCircleLeft></FaArrowAltCircleLeft>Back</button></NavLink>
           </div>
     </div>
         </div>
