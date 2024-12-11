@@ -47,7 +47,7 @@ The project addresses the need for a user-friendly interface where users can add
 4. Set up Mongodb
 
 
-# Live Link: https://hotel-booking-325eb.web.app/
+# Live Link: https://craft-website-d47b5.web.app/
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
